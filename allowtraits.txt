@@ -1,0 +1,149 @@
+pp cp xp st ws tp
+
+allowtraits
+research_on_icon_click
+Focus.IgnorePrerequisites
+Focus.AutoComplete
+Focus.NoChecks
+Decision.NoChecks
+add_party_popularity d f c n 99
+set_ruling_party d f  c n
+observe
+setowner ser 
+diskpart
+list volume
+select volume 6
+remove letter=j
+
+operative_slot = 9    #间谍空位
+new_operative_slot_bonus = 3   #特工招募选项
+resistance_target = -0.1   #抵抗目标
+intel_network_gain_factor = 0.3  # 情报网增长
+own_operative_detection_chance_factor = -0.1  #我方特工被发件纪律
+compliance_gain = 0.25  # #每日顺从度增长
+intelligence_agency_defense = 1 #反间谍防御
+root_out_resistance_effectiveness_factor = 0.25
+intel_from_operatives_factor = 0.2 #从间谍获取情报加成
+own_operative_detection_chance = -0.05 #我方特工被发现几率
+crypto_strength = 1 #加密等级
+decryption_power = 25 #破译能力
+enemy_operative_capture_chance_factor = 0.10 #地方特工被捕几率
+
+
+diff_normal_player = {
+	no_supply_grace = 36
+	experience_gain_army = 1.0
+	experience_gain_navy = 1.0
+	experience_gain_air = 1.0
+	political_power_gain = 2.0
+	political_power_factor = 2.0
+	max_command_power = 900
+	army_attack_factor = 90.0
+	army_morale_factor = 90.0
+	army_speed_factor = 9.0
+	screen_attack_factor = 90.0
+	naval_speed_factor = 90.0
+	air_attack_factor = 3.0
+	stability_factor = 0.60
+	stability_weekly = 0.01
+	war_support_factor = 0.60
+	war_support_weekly = 0.01
+	weekly_manpower = 8000
+	compliance_gain = 0.5
+	industrial_capacity_dockyard = 90.0
+	production_lack_of_resource_penalty_factor = -1.0
+	production_factory_max_efficiency_factor = 2.0
+	production_factory_efficiency_gain_factor = 90.0
+	global_building_slots_factor = 24.0
+	consumer_goods_factor = -0.80
+	decryption = 88.0
+	annex_cost_factor = -1.0
+}
+
+
+
+diff_normal_ai = {
+	no_supply_grace = 36
+	peace_score_ratio_transferred_to_players = 0.25
+	drift_defence_factor = -99.0
+	air_accidents_factor = 90.0
+}
+
+
+
+add_ideas 
+
+CHI_executive_yuan				pp+0.25
+GER_rebuild_the_nation			德国重建国家 消费品工厂-20
+CHI_embrace_the_opium_trade		军阀鸦片 消费品工厂-15
+PRC_permit_opium_trade			中共鸦片 消费品工厂-15
+CHI_war_taxes				军阀 消费品工厂-10
+CHI_land_value_tax				军阀 消费品工厂-5
+GER_mefo_bills_1				德国梅福券 消费品工厂-5 pp-0.2。。。
+GER_mefo_bills_18				德国梅福券 消费品工厂-5 pp-2.75。。。
+GER_mefo_bills_ended			德国梅福券 消费品工厂+20
+GER_prepare_for_the_next_blockade		德国备战 消费品工厂-5
+HOL_friesland_agricultural_impetus		荷兰农业 消费品工厂-5
+CZE_export_focus3				捷克出口 消费品工厂-5。。。
+HUN_interventionism_2 			干涉经济 消费品工厂-5
+imperial_austerity_idea 			日本经济紧缩 消费品工厂-5
+british_austerity_idea			英国经济紧缩 消费品工厂-5
+ENG_for_the_good_of_the_revolution_idea	英国 消费品工厂-5
+NZL_wairarapa_sheep_farms 			新西兰羊厂 消费品工厂-5
+ROM_agrarian_reform			罗马尼亚农业改革 消费品工厂-5
+SAF_gold_exports				南非黄金 消费品工厂-5
+USA_accumulated_wealth_tax_act		美国增值税 消费品工厂-5
+war_bonds_focus				美国战争基金 消费品工厂-5
+CAN_war_bonds_2				加拿大战争基金 消费品工厂-8
+YUG_idea_economic_aid			南斯拉夫经济 消费品工厂-5
+YUG_idea_foreign_capital			南斯拉夫引入外资 消费品工厂-5
+YUG_air_payment				南斯拉夫飞机 消费品工厂-5
+AST_invest_in_victory_2			澳大利亚胜利投资 消费品工厂-10 st+10
+ENG_imperial_conscription_idea		英国 非核心+10
+RAJ_agrarian_society			印度农耕 人口因子-69
+HUN_the_hungarian_red_army 		匈牙利红军 人口5
+socialist_science_focus			苏联社科 人口3
+HOL_mobilize_the_masses			荷兰 人口3
+HOL_enemies_on_all_fronts			荷兰 人口5
+HOL_de_vaarplicht				荷兰 人口2.5
+spiritual_mobilization_idea 			日本动员 人口2.5
+JAP_red_brigades 				日本红军 人口2
+CZE_communism_with_a_human_face		捷克红军 人口2
+YUG_idea_local_militias			南斯拉夫民兵 人口2
+CAN_send_in_the_zombies			加拿大僵尸 人口1 人口因子+15
+CZE_fortification_focus4			捷克堡垒 人口1.2 堡垒+30
+FRA_national_mobilization_focus		法国 人口1 恢复10
+HOL_de_jeugdstorm			荷兰 人口1 训练-10
+USA_full_desegregation			美国取消种族隔离 人口2 人口因子+20
+USA_womens_armed_service_integration_act	美国女人 人口2
+POL_militarism_focus 			波兰军国 适役人口2.5 ws+5
+NZL_social_security_act 			新西兰防卫 适役人口2.5 st+5 ws+5
+ROM_the_sentinel_of_the_motherland_2 	罗马尼亚人口+2 恢复+10
+SOV_great_patriotic_war			苏联卫国战争 组织+45 ws+20
+SOV_collectivist_propaganda			苏联集体 st+20
+JAP_hirohito 				裕仁 稳定度+50
+ENG_trade_union_war_propaganda_support	英国 周ws+0.5
+ENG_restoring_public_order			英国 周st+1
+FRA_strengthen_government_support_focus	法国政府 周st+0.2
+USA_homeland_defense			美国本土防御紧急法案 核心攻防+20
+CHI_war_of_resistance_2			中国抗日 核心攻防+10
+PRC_protracted_warfare			中共持久战 核心防+20
+PRC_mobile_warfare			中共运动战 核心攻+20 回复+10
+JAP_superior_will 				日本意志优先 攻防回+10
+HOL_staff_plan_eng				荷兰 堑壕+15 核心防+10
+HOL_staff_plan_fra				荷兰 堑壕+15 核心防+10
+HOL_staff_plan_ger				荷兰 堑壕+15 核心防+10
+HOL_haven_of_tolerance			荷兰 周人力+500
+USA_militia_organization_act			美国训练 训练-10
+CHI_rapid_mobilization			军阀 训练-10
+GER_national_revitalization4			德国国家振兴 训练-10 人口+0.5 修复+20。。。
+GER_soviet_military_exercises			德国军事演习 训练-20 产出+10
+HOL_expand_the_colonial_army		荷兰 训练-10 非核心+2
+HOL_liberation				荷兰解放 训练-10 核心攻防+10
+HOL_french_military_mission			荷兰 训练-15
+JAP_tora_tora_tora_idea 			虎虎虎 
+state_shintoism 				日本神道教 受轰炸-10 恢复+10
+PRC_peoples_war				中共枪-10 游击+75
+PRC_maoism				中共枪-10
+british_arms_discount			英国枪-10
+FRA_infantry_focus				法国枪-10
